@@ -6,20 +6,34 @@ Simple calculator program.
 
 - Addition
 - Subtraction
+- Multiplication
+- Division
 
 ## Run
 
 ```bash
 python3 calculator.py
 
+### 3. Update calculator.py
 
----
+Make sure it contains:
 
-### E. Initialize Git
+```python
+def add(a, b):
+    return a + b
 
-In terminal:
+def subtract(a, b):
+    return a - b
 
-```bash
-git init
-git add .
-git commit -m "Initial commit"
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    if b == 0:
+        return "Cannot divide by zero"
+    return a / b
+
+print("Addition:", add(10, 5))
+print("Subtraction:", subtract(10, 5))
+print("Multiplication:", multiply(10, 5))
+print("Division:", divide(10, 5))
